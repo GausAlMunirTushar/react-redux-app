@@ -1,10 +1,13 @@
 import React from 'react';
 import './assets/css/bootstrap.min.css';
-import CounterPage from './pages/CounterPage';
+import Todo from './pages/Todo';
+
 const App = () => {
   return (
     <div>
-      <CounterPage></CounterPage>
+      <Todo>
+
+      </Todo>
     </div>
   );
 };
