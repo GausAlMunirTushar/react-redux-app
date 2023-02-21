@@ -1,15 +1,19 @@
-import React from 'react';
+import React, { useRef } from 'react';
+import { useDispatch } from 'react-redux';
+import { addTodo } from '../../redux/state/todo/todoSlice';
 
 const CreateTodo = () => {
+    const dispatch = useDispatch();
+    const inputTask = useRef();
     return (
         <div>
             <div className="container">
                 <div className="row">
                     <div className="col-10">
-                        <input type="text" placeholder='Task Name' className='form-control' />
+                        <input ref={inputTask} type="text" placeholder='Task Name' className='form-control' />
                     </div>
                     <div className="col-2">
-                        <button className="btn btn-primary text-uppercase fw-bold">
+                        <button onClick={()=>{dispatch(addTodo(inputTask.current.value))}} className="btn btn-primary text-uppercase fw-bold">
                         Add To Do
                         </button>
                     </div>

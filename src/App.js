@@ -5,9 +5,7 @@ import Todo from './pages/Todo';
 const App = () => {
   return (
     <div>
-      <Todo>
-
-      </Todo>
+      <Todo></Todo>
     </div>
   );
 };
